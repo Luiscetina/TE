@@ -1,5 +1,6 @@
 #pragma once
 #include "model.h"
+#include "../hid/hid.h"
 
 enum {
 	SCRIPT_FATAL = 0,
