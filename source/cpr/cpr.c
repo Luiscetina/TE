@@ -22,6 +22,7 @@
 #include <string.h>
 #include <sys/stat.h>
 
+void BoxRestOfScreen(void);
 void _DeleteFileSimple(char *thing)
 {
     //char *thing = CombinePaths(path, entry.name);
