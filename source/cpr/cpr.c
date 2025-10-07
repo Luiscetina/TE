@@ -1,3 +1,4 @@
+void BoxRestOfScreen(void);
 // #include <utils/util.h>
 // #include "tools.h"
 #include <storage/nx_sd.h>
@@ -22,7 +23,6 @@
 #include <string.h>
 #include <sys/stat.h>
 
-void BoxRestOfScreen(void);
 void _DeleteFileSimple(char *thing)
 {
     //char *thing = CombinePaths(path, entry.name);
