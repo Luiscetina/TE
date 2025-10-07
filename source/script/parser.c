@@ -232,7 +232,9 @@ u8 nextToken(char** inPtr, void** val) {
 				if (!memcmp(t.strToken, in, (t.strToken[1] == '\0') ? 1 : 2)) {
 					//gfx_printf("Token: '%s'\n", t.strToken);
 					ret = Token_Token;
-					*val = t.token;
+					u8* token_ptr = malloc(sizeof(u8));
+					*token_ptr = t.token;
+					*val = token_ptr;
 
 					if (t.strToken[1] != '\0')
 						in++;
@@ -372,7 +374,7 @@ ParserRet_t parseScript(char* in, u32 len) {
 			op.variable = reference;
 		}
 		else if (tokenType == Token_Token) {
-			u8 token = (u8)var;
+			u8 token = *(u8*)var;
 
 			if (token == Equals && lastOp) {
 				if (lastOp->token == Variable) {
