@@ -1,4 +1,3 @@
-void BoxRestOfScreen(void);
 // #include <utils/util.h>
 // #include "tools.h"
 #include <storage/nx_sd.h>
@@ -22,6 +21,8 @@ void BoxRestOfScreen(void);
 // #include <stdio.h>
 #include <string.h>
 #include <sys/stat.h>
+
+void BoxRestOfScreen(void);
 
 void _DeleteFileSimple(char *thing)
 {
