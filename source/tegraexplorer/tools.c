@@ -19,6 +19,8 @@
 #include "../fs/fscopy.h"
 #include "../utils/utils.h"
 
+void display_backlight_brightness(int brightness, int duration);
+
 void DumpSysFw(){
 	char sysPath[25 + 36 + 3 + 1]; // 24 for "bis:/Contents/registered", 36 for ncaName.nca, 3 for /00, and 1 to make sure :)
 	char *baseSdPath;
@@ -112,7 +114,7 @@ void DumpSysFw(){
 		gfx_printf("\nDump fehlgeschlagen...\n");
 	}
 
-	gfx_printf("\n\nAbgeschlossen! Benötigte Zeit: %ds\nBeliebige Taste zum Beenden", get_tmr_s() - timer);
+	gfx_printf("\n\nAbgeschlossen! BenÃ¶tigte Zeit: %ds\nBeliebige Taste zum Beenden", get_tmr_s() - timer);
 	free(baseSdPath);
 	hidWait();
 }
