@@ -28,6 +28,10 @@
 #include "../storage/emmcfile.h"
 #include <soc/fuse.h>
 #endif
+
+int m_entry_fixArchiveBit(int);
+int m_entry_fixMacSpecialFolders(int);
+
 // Takes [int, function]. Returns elseable.
 ClassFunction(stdIf) {
 	s64 value = getIntValue(args[0]);
